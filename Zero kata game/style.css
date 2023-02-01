@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: beige;
+}
+
+nav{
+    background-color: darkslategrey;
+    color: white;
+    height: 3rem;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    
+}
+nav ul {
+    list-style: none;
+}
+
+.gamecontainer{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.br{
+    border-right: 0;
+}
+.bl{
+    border-left: 0;
+}
+.bt{
+    border-top: 0;
+}
+.bb{
+    border-bottom: 0;
+}
+
+.gameinfo{
+    font-family: 'Cedarville Cursive', cursive;
+    padding: 0 34px;
+    
+}
+.gameinfo h1{
+    font-size: 2.5rem;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out ;
+}
+
+.box:hover{
+    background-color: rgb(242, 234, 250);
+}
+.info {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s ease-in-out;
+}
+
+#reset{
+    background-color: rgb(241 226 255);
+    padding: 0px 14px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-family: 'Cedarville Cursive';
+    font-weight: 1000;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 860px)
+{
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .gameinfo h1{
+        font-size: 29px;
+    }
+
+    .info {
+        font-size: 24px;
+    }
+
+    #reset {
+        padding: 0px 15px;
+        font-size: 17px;
+    }
+    .container {
+        
+        grid-template-columns: repeat(3,15vw);
+        grid-template-rows: repeat(3,16vw);
+    }
+}
